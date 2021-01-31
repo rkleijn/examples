@@ -15,13 +15,12 @@ To use just clone this repo then
 ```
 npm install
 ```
-create an instance of the connectivity service in the space where you want to deploy the app. Adjust the manifest file to reference the created service and 
+Then create an instance of the connectivity service in the space where you want to deploy the app. Adjust the manifest file to reference the created service and make the respective changes to server.js to reflect your situation. After that:
 ```
 cf push 
 ```
 
-Also make the respective chages to server.js to reflect your situation.
-For reference the cloud connector config:
-<div align='center'>
-    <img src="./images/scc_config.png" alt="SAP Cloud Connector Config Example" align=center />
-</div>
+For reference the cloud connector config that was used:
+![SAP Cloud Connector Example Config](./images/scc_config.png)
+
+The first is a local hana express and the second a http endpoint stub to easily test both scenarios (SQLDBC and HTTP). 

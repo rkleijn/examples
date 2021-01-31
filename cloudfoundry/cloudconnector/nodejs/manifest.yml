@@ -1,0 +1,10 @@
+---
+applications:
+- name: onpremtest
+  command: node server.js
+  memory: 128M
+  buildpacks:
+  - nodejs_buildpack
+  services:
+  - connectivityinstance
+  
