@@ -24,3 +24,5 @@ For reference the cloud connector config that was used:
 ![SAP Cloud Connector Example Config](./images/scc_config.png)
 
 The first is a local hana express and the second a http endpoint stub to easily test both scenarios (SQLDBC and HTTP). 
+
+Please realize this example does not utilize the destination service which it advised to use as that would then not require hardcoding of URLs in the code. The above mentioned blog shows how to do this.

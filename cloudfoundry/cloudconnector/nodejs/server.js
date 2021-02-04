@@ -58,6 +58,13 @@ const _fetchJwtToken = async function(oauthUrl, oauthClient, oauthSecret) {
 // SQL _onCallOnPrem
 const _callOnPremSql = async function(connProxyHost, connProxyPort, connJwtToken){
     return new Promise ((resolve, reject) => {
+    	// Quick explanation of parameters used:
+    	// serverNode: Is the virtual host/port configured in SCC
+    	// UID: db userid
+    	// PWD: db password
+    	// proxyHostname: SCP/BTP proxy required to access SCC
+    	// proxyPort: SCP/BTP proxy port required to access SCC (needs to be socks5 port for SQLDBC)
+    	// sslValidateCertificate: Enable validation on whether cert is from known trusted CA
         var connOptions = {
             serverNode: 'localhxe:39015',
             UID: 'TESTUSER',
